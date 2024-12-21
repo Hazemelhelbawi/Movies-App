@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
-export default function Navbar({ userData , logout}) {
+export default function Navbar({ userData, logout }) {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark">
@@ -51,37 +51,36 @@ export default function Navbar({ userData , logout}) {
             )}
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            {userData ? (
+              {userData ? (
                 <>
-<li className="nav-item dropdown">
-  <a
-    className="nav-link dropdown-toggle"
-    href="#"
-    id="navbarDropdown"
-    role="button"
-    data-bs-toggle="dropdown"
-    aria-expanded="false"
-  >
-    Hello {userData.first_name}
-  </a>
-  <ul className="dropdown-menu bg-dark text-white" aria-labelledby="navbarDropdown">
-    <li className="dropdown-item bg-transparent">
-      <NavLink className="nav-link" to="profile">
-        Profile
-      </NavLink>
-    </li>
-    <li className="dropdown-item bg-transparent">
-      <NavLink className="nav-link" onClick={logout}>
-        Logout
-      </NavLink>
-    </li>
-  </ul>
-</li>
-
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Hello {userData.first_name}
+                    </a>
+                    <ul className="dropdown-menu bg-dark text-white" aria-labelledby="navbarDropdown">
+                      <li className="dropdown-item bg-transparent">
+                        <NavLink className="nav-link" to="profile">
+                          Profile
+                        </NavLink>
+                      </li>
+                      <li className="dropdown-item bg-transparent">
+                        <NavLink className="nav-link" onClick={logout}>
+                          Logout
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </li>
                 </>
               ) : (
                 <>
-                  
+
                   <li className="nav-item ">
                     <NavLink className="nav-link" to="register">
                       Register
@@ -96,23 +95,23 @@ export default function Navbar({ userData , logout}) {
               )}
               <ul className="list-unstyled d-flex m-auto ">
                 <li className="mx-2">
-                  
-                  <i  target="_blank" to="www.facebook.com" className="fab fa-facebook  "></i>
+
+                  <i target="_blank" to="www.facebook.com" className="fab fa-facebook  "></i>
                 </li>
                 <li className="mx-2">
-                  
-                  <i  target="_blank" to="www.twitter.com" className="fab fa-twitter"></i>
+
+                  <i target="_blank" to="www.twitter.com" className="fab fa-twitter"></i>
                 </li>
                 <li className="mx-2  ">
-                  
-                  <i   target="_blank" to="https://www.linkedin.com/in/hazem-elhelbawi" className="fab fa-linkedin"></i>
+
+                  <i target="_blank" to="https://www.linkedin.com/in/hazem-elhelbawi" className="fab fa-linkedin"></i>
                 </li>
                 <li className="mx-2">
-                  
-                  <i  target="_blank" to="https://github.com/Hazemelhelbawi" className="fab fa-github"></i>
+
+                  <i target="_blank" to="https://github.com/Hazemelhelbawi" className="fab fa-github"></i>
                 </li>
               </ul>
- 
+
             </ul>
           </div>
         </div>
